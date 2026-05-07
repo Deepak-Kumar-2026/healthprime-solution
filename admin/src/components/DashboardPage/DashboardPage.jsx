@@ -1,3 +1,5 @@
+import { backendUrl } from "../../config.js";
+
 import React, { useMemo, useState, useEffect } from "react";
 import {
   Search,
@@ -13,7 +15,7 @@ import { dashboardStyles as s } from "../../assets/dummyStyles";
 /* ----------------------
   Config
 ------------------------ */
-const API_BASE = "http://localhost:4000";
+const API_BASE = backendUrl;
 // Endpoint that returns JSON { count: <number> }
 const PATIENT_COUNT_API = `${API_BASE}/api/appointments/paitents/count`;
 

@@ -1,4 +1,5 @@
 // src/pages/ServiceDetail/ServiceDetail.jsx
+import { backendUrl } from "../../config.js";
 import React, { useEffect, useState } from "react";
 import {
   ArrowLeft,
@@ -13,7 +14,7 @@ import { useAuth } from "@clerk/clerk-react";
 import toast, { Toaster } from "react-hot-toast";
 import { serviceDetailStyles, iconSize } from "../../assets/dummyStyles";
 
-const DEFAULT_HOST = "http://localhost:4000".replace(/\/$/, "");
+const DEFAULT_HOST = backendUrl.replace(/\/$/, "");
 
 export default function ServiceDetail() {
   const { id } = useParams();

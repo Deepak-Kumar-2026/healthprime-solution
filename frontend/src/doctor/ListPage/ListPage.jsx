@@ -1,9 +1,10 @@
+import { backendUrl } from "../../config.js";
 import React, { useEffect, useMemo, useState } from "react";
 import { Search, X, Phone, Calendar } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { listPageStyles } from "../../assets/dummyStyles";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = backendUrl;
 
 /* -------------------------
    Utils

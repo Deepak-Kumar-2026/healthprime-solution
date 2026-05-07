@@ -1,3 +1,4 @@
+import { backendUrl } from "../../config.js";
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
 import {
@@ -10,7 +11,8 @@ import {
 } from "lucide-react";
 import { dashboardStyles } from "../../assets/dummyStyles";
 
-const API_BASE = "http://localhost:4000"; // override by passing apiBase prop
+ // override by passing apiBase prop
+const API_BASE = backendUrl;
 
 /* -------------------------
    Helpers: date/time + status mapping

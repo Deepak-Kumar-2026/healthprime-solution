@@ -1,3 +1,4 @@
+import { backendUrl } from "../../config.js";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
@@ -8,7 +9,7 @@ import { loginPageStyles, toastStyles } from "../../assets/dummyStyles";
 const STORAGE_KEY = "doctorToken_v1";
 
 export default function LoginPage({ apiBase }) {
-  const API_BASE = apiBase || "http://localhost:4000";
+  const API_BASE = apiBase || backendUrl;
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [busy, setBusy] = useState(false);
   const navigate = useNavigate();

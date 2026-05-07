@@ -7,6 +7,8 @@
 //      localStorage.setItem('service_bookings_updated', Date.now())
 //  - This component also exposes window.refreshServices() for convenience.
 
+import { backendUrl } from "../../config.js";
+
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   ClipboardList,
@@ -18,7 +20,7 @@ import {
 } from "lucide-react";
 import { serviceDashboardStyles } from "../../assets/dummyStyles";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = backendUrl;
 
 /* -----------------------
    Normalizer - robust to multiple backend shapes

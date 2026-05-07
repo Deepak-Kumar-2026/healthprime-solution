@@ -1,5 +1,7 @@
 // src/components/AnimatedDoctorList.responsive.jsx
 import React, { useMemo, useState, useEffect } from "react";
+import { backendUrl } from "../../config.js";
+
 import {
   Star,
   BadgeIndianRupee,
@@ -99,7 +101,7 @@ function getSortedScheduleDates(scheduleLike) {
 /* --------------------------------------------------------------------- */
 
 export default function AnimatedDoctorListResponsive({ apiBase }) {
-  const API_BASE = apiBase || "http://localhost:4000";
+  const API_BASE = apiBase || backendUrl;
 
   const [doctors, setDoctors] = useState([]);
   const [expanded, setExpanded] = useState(null);

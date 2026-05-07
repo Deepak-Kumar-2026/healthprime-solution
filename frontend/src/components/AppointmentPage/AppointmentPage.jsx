@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState, useCallback } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { backendUrl } from "../../config.js";
 import {
   CalendarDays,
   Clock,
@@ -18,7 +19,7 @@ import {
   iconSize,
 } from "../../assets/dummyStyles";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:4000";
+const API_BASE = backendUrl;
 const API = axios.create({ baseURL: API_BASE });
 
 /* -------------------- Helpers -------------------- */

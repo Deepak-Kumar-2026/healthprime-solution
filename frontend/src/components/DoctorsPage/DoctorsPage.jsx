@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { backendUrl } from "../../config.js";
 import {
   Medal,
   ChevronsRight,
@@ -12,7 +13,7 @@ import {
 import { doctorsPageStyles } from "../../assets/dummyStyles";
 
 const DoctorsPage = ({ apiBase }) => {
-  const API_BASE = apiBase || "http://localhost:4000";
+  const API_BASE = apiBase || backendUrl;
 
   const [allDoctors, setAllDoctors] = useState([]);
   const [loading, setLoading] = useState(true);

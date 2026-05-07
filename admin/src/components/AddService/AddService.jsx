@@ -1,5 +1,7 @@
 // AddService.jsx
 import React, { useState, useRef, useEffect } from "react";
+import { backendUrl } from "../../config.js";
+
 import {
   Image as ImageIcon,
   Plus,
@@ -15,7 +17,7 @@ import { addServiceStyles } from "../../assets/dummyStyles";
 
 
 export default function AddService({ apiBase, serviceId }) {
-  const API_BASE = apiBase || "http://localhost:4000";
+  const API_BASE = apiBase || backendUrl;
 
   const fileRef = useRef(null);
   const [imagePreview, setImagePreview] = useState(null); // either objectURL or remote imageUrl

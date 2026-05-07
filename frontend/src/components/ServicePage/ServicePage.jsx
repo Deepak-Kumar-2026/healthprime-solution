@@ -1,4 +1,5 @@
 // src/pages/ServicePage/ServicePage.jsx
+import { backendUrl } from "../../config.js";
 import React, { useEffect, useState } from "react";
 import { ChevronsRight, MousePointer2Off } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -108,7 +109,7 @@ const ServiceCard = ({ service }) => {
 };
 
 export default function ServicePage({ apiBase, previewCount = 9999 }) {
-  const API_BASE = apiBase || "http://localhost:4000";
+  const API_BASE = apiBase || backendUrl;
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

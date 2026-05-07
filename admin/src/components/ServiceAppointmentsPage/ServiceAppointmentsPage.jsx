@@ -1,7 +1,8 @@
 // ServiceAppointmentsPage.jsx
 // Fixed reschedule flow to send `rescheduledTo` and handle backend response shape { success: true, data: updated }
-
 import React, { useEffect, useMemo, useState } from "react";
+import { backendUrl } from "../../config.js";
+
 import {
   User,
   Phone,
@@ -19,7 +20,7 @@ import { serviceAppointmentsStyles } from "../../assets/dummyStyles";
 /* ----------------------
   Config
 ------------------------ */
-const API_BASE = "http://localhost:4000";
+const API_BASE = backendUrl;
 
 /* ----------------------
   Helpers

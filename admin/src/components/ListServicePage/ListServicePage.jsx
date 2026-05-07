@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import { backendUrl } from "../../config.js";
+
 import {
   Image as ImageIcon,
   Edit2,
@@ -13,7 +15,7 @@ import {
 import { serviceListStyles as s } from "../../assets/dummyStyles";
 
 export default function ListServicePage({ apiBase }) {
-  const API_BASE = apiBase || "http://localhost:4000";
+  const API_BASE = apiBase || backendUrl;
 
   const [services, setServices] = useState([]);
   const [openDetails, setOpenDetails] = useState({});

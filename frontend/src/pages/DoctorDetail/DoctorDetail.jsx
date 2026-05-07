@@ -1,4 +1,5 @@
 // src/pages/DoctorDetail/DoctorDetail.jsx
+import { backendUrl } from "../../config.js";
 import React, { useMemo, useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import {
@@ -23,7 +24,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useAuth, useUser } from "@clerk/clerk-react";
 import { doctorDetailStyles } from "../../assets/dummyStyles";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = backendUrl;
 
 function getScheduleDates(schedule) {
   if (!schedule) return [];
