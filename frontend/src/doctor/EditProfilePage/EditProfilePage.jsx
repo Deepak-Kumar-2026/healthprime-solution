@@ -414,7 +414,8 @@ export default function EditProfilePage({ apiBase }) {
                     className={styles.imageInput}
                     disabled={!editing}
                   />
-                  <ImageIcon className={styles.imageEditIcon(editing)} />
+                  {/* <ImageIcon className={styles.imageEditIcon(editing)} /> */}
+                  <ImageIcon className={styles.imageEditIcon} />
                 </label>
               </div>
             </div>
